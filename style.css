@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: cadetblue;
+  height: 50px;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.gameinfo {
+  margin-left: 100px;
+  font-family: "Edu QLD Beginner", cursive;
+}
+
+.gamecontainer {
+  /* background-color: red; */
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  background-color: rgb(152, 221, 235);
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.box {
+  border: 2px solid;
+  border-color: black;
+  font-size: 8vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.box:hover {
+  background-color: rgb(242, 194, 191);
+}
+.imgbox img {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+
+#reset {
+  /* margin-top: 100; */
+  padding: 15px;
+  background-color: aliceblue;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+#reset:hover {
+  background-color: red;
+  color: white;
+}
+.info{
+ font-size: 20px;
+ margin-right: 100px;
+}
+
+.line{
+  background-color: rgb(234, 9, 9);
+  width: 0;
+  height: 3px;
+  position: absolute;
+  transition: width 1s ease-out;
+
+}
+
+@media screen and (max-width: 800px) {
+  .gamecontainer {
+    flex-wrap: wrap;
+  }
+  .gameinfo{
+    margin-top: 35px;
+  }
+  .container{
+    grid-template-rows: repeat(3, 25vw);
+    grid-template-columns: repeat(3, 25vw);
+    /* font-family: "Roboto", sans-serif; */
+  }
+}
